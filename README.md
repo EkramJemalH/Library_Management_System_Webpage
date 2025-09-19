@@ -47,12 +47,16 @@ Data Handling: LocalStorage (can be upgraded to a real database later)
 
 📂 Project Structure
 library-management/
-│── index.html          # Login page
-│── admin-dashboard.html # Admin panel
-│── member-dashboard.html # Member panel
-│── style.css           # Stylesheet
-│── script.js           # Main JS logic (toggle, CRUD, etc.)
-│── README.md           # Project documentation
+│── index.html            # Login page
+│── admin-dashboard.html  # Admin dashboard
+│── member-dashboard.html # Member dashboard
+│── aboutUs.html 
+│── contact.html 
+│── signIn.html
+│── register.html
+│── style.css             # Stylesheet
+│── script.js             # Main JavaScript logic (CRUD, toggle, etc.)
+│── README.md             # Project documentation
 
 ⚡ Setup & Usage
 
