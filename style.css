@@ -38,6 +38,7 @@ header div{
     transform: scale(1.1);        /* slight grow effect */
 }
 
+
 .nav-bar ul{
     display:flex;
     justify-content: flex-end;
@@ -73,6 +74,14 @@ header div{
 /* On hover, grow the underline */
 .nav-bar ul li a:hover::after {
   width: 100%;                  /* full width of the link */
+}
+.nav-bar ul li a.active {
+  color: orangered;
+  font-weight: bold;
+}
+
+.nav-bar ul li a.active::after {
+  width: 100%;  /* underline stays full */
 }
 .sign-in {
     border: 2px solid orangered;
@@ -209,4 +218,44 @@ footer .social-icons a:hover {
 .about-page ul li {
   margin-bottom: 8px;
   font-size: 1rem;
+}
+.contact-container{
+    max-width:600px;
+    height:600px;
+    margin:50px auto;
+    padding:30px;
+    background:rgb(221, 251, 252,0.7);
+    border-radius:12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+}
+.contact{
+    display:flex;
+    flex-direction: column;
+    margin:42px;
+
+}
+.contact label{
+    font-size: 20px;
+    margin:12px;
+
+}
+.contact input{
+    width:300px;
+    height:30px;
+}
+.contact textarea{
+    width:300px;
+    height:100px;
+    margin-bottom: 12px;
+}
+.contact .submit{
+    font-weight: 700;
+    font-size: 15px;
+}
+.contact .submit:hover{
+    background-color: orangered;
+    color:#ffffff;
+    font-weight: 900;
+    border: 2px solid white;
 }
