@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>signIn</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header>
+    <header>
         <div class="name">BookNest</div>
         <nav class="nav-bar">
             <ul>
@@ -15,24 +15,24 @@
                 <li><a href="AboutUs.html" >About Us</a></li>
                 <li><a href="Contact.html" >Contact Us</a></li>
                 <li><button id="mode-toggle">☀️</button></li>
-                               <li><button class="sign-in" id="signInBtn">Sign In</button></li>
+                <li><button class="sign-in" id="signInBtn">Sign In</button></li>
+            </ul>
         </nav>
     </header>
-    <div class="contact-container">
-        <h1>Contact Us</h1>
-    <form class="contact">
-        <label>Full Name</label>
-        <input type="text" name="name" required>
-        <label>Email</label>
-        <input type="email" placeholder="example@gmail.com" name="email" required>
-        <label>Phone Number</label>
-        <input type="tel" placeholder="+0*********" required>
-        <label>Message</label>
-        <textarea></textarea>
-        <input type="submit" value="submit" name="submit" class="submit"> 
+    <main class="signin-page">
+    <h1>Sign In</h1>
+    <form id="signin-form">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="example@gmail.com" required>
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Your Name" required>
+
+      <button type="submit">Sign In</button>
     </form>
-</div>
-<footer>
+    <p>Not registered? <a href="register.html">Create an account</a></p>
+  </main>
+  <footer>
   <p>© 2025 BookNest. All rights reserved.</p>
   <div class="social-icons">
     <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>

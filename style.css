@@ -224,10 +224,13 @@ footer .social-icons a:hover {
     height:600px;
     margin:50px auto;
     padding:30px;
-    background:rgb(221, 251, 252,0.7);
+    background:rgba(255, 255, 255, 0.925);
     border-radius:12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 
+}
+.contact-container h1{
+    color: orangered;
 }
 .contact{
     display:flex;
@@ -252,6 +255,8 @@ footer .social-icons a:hover {
 .contact .submit{
     font-weight: 700;
     font-size: 15px;
+    color: orangered;
+    border: 2px solid orangered;
 }
 .contact .submit:hover{
     background-color: orangered;
@@ -259,3 +264,138 @@ footer .social-icons a:hover {
     font-weight: 900;
     border: 2px solid white;
 }
+.signin-page {
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 30px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .signin-page h1 {
+      color: orangered;
+      margin-bottom: 25px;
+    }
+
+    .signin-page form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .signin-page input[type="email"],
+    .signin-page input[type="text"] {
+      padding: 12px;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .signin-page input:focus {
+      border-color: orangered;
+    }
+
+    .signin-page button {
+      padding: 12px;
+      border-radius: 25px;
+      border: none;
+      background: orangered;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .signin-page button:hover {
+      background: darkorange;
+    }
+
+    .signin-page p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .signin-page p a {
+      color: orangered;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .signin-page p a:hover {
+      text-decoration: underline;
+    }
+    
+    .register-page {
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 30px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .register-page h1 {
+      color: orangered;
+      margin-bottom: 25px;
+    }
+
+    .register-page form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .register-page input[type="email"],
+    .register-page input[type="text"] {
+      padding: 12px;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .register-page input:focus {
+      border-color: orangered;
+    }
+
+    .register-page button {
+      padding: 12px;
+      border-radius: 25px;
+      border: none;
+      background: orangered;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .register-page button:hover {
+      background: darkorange;
+    }
+
+    .register-page p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .register-page p a {
+      color: orangered;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .register-page p a:hover {
+      text-decoration: underline;
+    }
+    .role-selection {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 10px;
+      }

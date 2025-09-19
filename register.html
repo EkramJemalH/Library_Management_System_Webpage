@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>register</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header>
+    <header>
         <div class="name">BookNest</div>
         <nav class="nav-bar">
             <ul>
@@ -18,21 +18,23 @@
                                <li><button class="sign-in" id="signInBtn">Sign In</button></li>
         </nav>
     </header>
-    <div class="contact-container">
-        <h1>Contact Us</h1>
-    <form class="contact">
-        <label>Full Name</label>
-        <input type="text" name="name" required>
-        <label>Email</label>
-        <input type="email" placeholder="example@gmail.com" name="email" required>
-        <label>Phone Number</label>
-        <input type="tel" placeholder="+0*********" required>
-        <label>Message</label>
-        <textarea></textarea>
-        <input type="submit" value="submit" name="submit" class="submit"> 
+    <main class="register-page">
+    <h1>Register</h1>
+    <form id="register-form">
+      <label for="email">Email</label>
+      <input type="email" id="reg-email" placeholder="example@gmail.com" required>
+
+      <label for="name">Full Name</label>
+      <input type="text" id="reg-name" placeholder="Your Name" required>
+        <div class="role-selection">
+                <label><input type="radio" name="role" value="admin" required> Admin</label>
+                <label><input type="radio" name="role" value="member" required> Member</label>
+            </div>
+      <button type="submit">Register</button>
     </form>
-</div>
-<footer>
+
+  </main>
+  <footer>
   <p>© 2025 BookNest. All rights reserved.</p>
   <div class="social-icons">
     <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
