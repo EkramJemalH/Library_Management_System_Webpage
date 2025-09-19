@@ -34,6 +34,19 @@
         </div>
 
         <!-- Books List -->
+         <!-- Add in admin-dashboard.html or member-dashboard.html -->
+<div class="search-filter">
+  <input type="text" id="searchInput" placeholder="Search by title or author...">
+  <select id="filterSelect">
+    <option value="available">Available</option>
+     <option value="borrowed">Borrowed</option>
+  <option value="all">All</option>
+</select>
+</div>
+
+<div id="bookList"></div>
+
+
         <div class="section">
             <h2>Available Books</h2>
             <table id="books-table">

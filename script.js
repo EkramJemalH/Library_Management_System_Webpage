@@ -239,6 +239,83 @@ if(window.location.pathname.includes('member-dashboard.html')) {
 
     renderMemberBooks();
 }
+function displayBooksForMember() {
+  let books = JSON.parse(localStorage.getItem("books")) || [];
+  const search = document.getElementById("searchInput").value.toLowerCase();
+  const filter = document.getElementById("filterSelect").value;
+
+  let filteredBooks = books.filter(book => {
+    const matchesSearch = 
+      book.title.toLowerCase().includes(search) || 
+      book.author.toLowerCase().includes(search);
+
+    const matchesFilter = 
+      filter === "all" ? true : book.status === filter;
+
+    return matchesSearch && matchesFilter;
+  });
+
+  let output = "";
+  filteredBooks.forEach(book => {
+    output += `
+      <div class="book-card">
+        <h3>${book.title}</h3>
+        <p><strong>Author:</strong> ${book.author}</p>
+        <p><strong>Status:</strong> ${book.status}</p>
+        ${book.status === "available" ? `<button onclick="requestBorrow('${book.title}')">Borrow</button>` : ""}
+      </div>
+    `;
+  });
+
+  document.getElementById("bookList").innerHTML = output;
+}
+
+// Event listeners
+if(document.getElementById("searchInput")){
+  document.getElementById("searchInput").addEventListener("input", displayBooksForMember);
+  document.getElementById("filterSelect").addEventListener("change", displayBooksForMember);
+  displayBooksForMember();
+}
+function generateReports() {
+  let books = JSON.parse(localStorage.getItem("books")) || [];
+  let members = JSON.parse(localStorage.getItem("members")) || [];
+
+  const totalBooks = books.length;
+  const availableBooks = books.filter(b => b.status === "available").length;
+  const borrowedBooks = books.filter(b => b.status === "borrowed").length;
+  const totalMembers = members.length;
+
+  if(document.getElementById("totalBooks")){
+    document.getElementById("totalBooks").textContent = totalBooks;
+    document.getElementById("availableBooks").textContent = availableBooks;
+    document.getElementById("borrowedBooks").textContent = borrowedBooks;
+    document.getElementById("totalMembers").textContent = totalMembers;
+  }
+}
+
+function generateCharts() {
+  let books = JSON.parse(localStorage.getItem("books")) || [];
+  const availableBooks = books.filter(b => b.status === "available").length;
+  const borrowedBooks = books.filter(b => b.status === "borrowed").length;
+
+  if(document.getElementById("bookChart")){
+    new Chart(document.getElementById("bookChart"), {
+      type: "pie",
+      data: {
+        labels: ["Available", "Borrowed"],
+        datasets: [{
+          data: [availableBooks, borrowedBooks],
+          backgroundColor: ["#4CAF50", "#FF5722"]
+        }]
+      }
+    });
+  }
+}
+
+// Run on admin dashboard load
+generateReports();
+generateCharts();
+
 // ---------------------- Dark/Light Mode Toggle ----------------------
 const modeToggle = document.getElementById('mode-toggle');
 
