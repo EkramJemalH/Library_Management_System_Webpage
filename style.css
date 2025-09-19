@@ -8,6 +8,165 @@
   body{
     background-color: azure;
   }
+  /* ---------------- Dark Mode ---------------- */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode header div,
+body.dark-mode .nav-bar ul li a,
+body.dark-mode .stat-card p,
+body.dark-mode .quick-stats .stat p,
+body.dark-mode .section h2,
+body.dark-mode .add-book-form h3 {
+    color: #f0f0f0;
+}
+
+body.dark-mode .section,
+body.dark-mode .add-book-form,
+body.dark-mode .contact-container,
+body.dark-mode .signin-page,
+body.dark-mode .register-page,
+body.dark-mode .about-page section {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .section th {
+    background-color: #ff5722; /* orangered for dark mode */
+    color: #fff;
+}
+
+body.dark-mode .section td {
+    border-color: #333;
+    color: #ddd;
+}
+
+body.dark-mode .stat-card {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .add-book-form input,
+body.dark-mode .contact input,
+body.dark-mode .contact textarea,
+body.dark-mode .signin-page input,
+body.dark-mode .register-page input {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
+
+body.dark-mode .add-book-form button,
+body.dark-mode .contact .submit,
+body.dark-mode .signin-page button,
+body.dark-mode .register-page button,
+body.dark-mode .section button,
+body.dark-mode .admin-btn,
+body.dark-mode #mode-toggle {
+    background-color: orangered;
+    color: white;
+}
+
+body.dark-mode .add-book-form button:hover,
+body.dark-mode .contact .submit:hover,
+body.dark-mode .signin-page button:hover,
+body.dark-mode .register-page button:hover,
+body.dark-mode .section button:hover,
+body.dark-mode .admin-btn:hover {
+    background-color: darkorange;
+}
+
+/* ---------------- Responsive Media Queries ---------------- */
+@media screen and (max-width: 1200px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-section img {
+        width: 90%;
+        margin: 20px 0;
+    }
+
+    .quick-stats {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .dashboard-container {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .section table,
+    .section th,
+    .section td {
+        font-size: 14px;
+    }
+
+    .add-book-form {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    #books-table img {
+        width: 50px;
+        height: 70px;
+    }
+
+    .contact-container {
+        width: 95%;
+        padding: 15px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section th, .section td {
+        padding: 8px;
+    }
+
+    .stat-card h2 {
+        font-size: 28px;
+    }
+
+    #mode-toggle {
+        font-size: 16px;
+        padding: 4px 10px;
+    }
+}
+
 header{
     display: flex;
 justify-content: space-between; 
